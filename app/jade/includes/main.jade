@@ -1,0 +1,21 @@
+section.main(ng-controller="textController as text")
+	.content
+		.title messages
+		ul
+			li.content-data(ng-repeat="mes in text.messages")
+				p.name {{ mes.name }}
+				p.email {{ mes.email }}
+				p.message {{ mes.message }}
+	.form
+		.title For send
+		form(name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(text.messages)" novalidate)
+			fieldset.form-group
+				input.form-control(type="text" placeholder="Name..." title="Name" ng-model="reviewCtrl.review.name" required)
+			fieldset.form-group
+				input.form-control(type="email" placeholder="exemple@gmail.com" title="Email" ng-model="reviewCtrl.review.email" required)
+			fieldset.form-group
+				textarea.form-control(rows="5" placeholder="Message..." title="Message" ng-model="reviewCtrl.review.message" required)
+			fieldset.form-group
+				button.btn.btn-right()
+					svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 448.8 448.8" xml:space="preserve")
+						polygon(points="142.8,323.85 35.7,216.75 0,252.45 142.8,395.25 448.8,89.25 413.1,53.55   " fill="#FFFFFF")

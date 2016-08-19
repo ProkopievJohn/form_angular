@@ -1,0 +1,9 @@
+{
+  "name": "Angular_min_form",
+  "version": "0.1.0",
+  "description": "John Prokopiev. form with angular",
+  "author": "Prokopiev John <ProkopievJohn@gmail.com>",
+  "dependencies": {
+    "angular": "1.5.8"
+  }
+}

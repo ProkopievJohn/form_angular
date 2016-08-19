@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularForm">
+
+<head>
+   <meta charset="UTF-8" />
+   <title>Angular form</title>
+   <!-- build:css css/vender.css-->
+   <!-- bower:css-->
+   <!-- endbower-->
+   <!-- endbuild-->
+   <!-- build:css css/style.css-->
+   <link rel="stylesheet" href="css/style.min.css" />
+   <!-- endbuild-->
+</head>
+
+<body>
+   <section ng-controller="textController as text" class="main">
+      <div class="content">
+         <div class="title">messages</div>
+         <ul>
+            <li ng-repeat="mes in text.messages" class="content-data">
+               <p class="name">{{ mes.name }}</p>
+               <p class="email">{{ mes.email }}</p>
+               <p class="message">{{ mes.message }}</p>
+            </li>
+         </ul>
+      </div>
+      <div class="form">
+         <div class="title">For send</div>
+         <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid &amp;&amp; reviewCtrl.addReview(text.messages)" novalidate="novalidate">
+            <fieldset class="form-group">
+               <input type="text" placeholder="Name..." title="Name" ng-model="reviewCtrl.review.name" required="required" class="form-control" />
+            </fieldset>
+            <fieldset class="form-group">
+               <input type="email" placeholder="exemple@gmail.com" title="Email" ng-model="reviewCtrl.review.email" required="required" class="form-control" />
+            </fieldset>
+            <fieldset class="form-group">
+               <textarea rows="5" placeholder="Message..." title="Message" ng-model="reviewCtrl.review.message" required="required" class="form-control"></textarea>
+            </fieldset>
+            <fieldset class="form-group">
+               <button class="btn btn-right">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 448.8 448.8" xml:space="preserve">
+                     <polygon points="142.8,323.85 35.7,216.75 0,252.45 142.8,395.25 448.8,89.25 413.1,53.55   " fill="#FFFFFF"></polygon>
+                  </svg>
+               </button>
+            </fieldset>
+         </form>
+      </div>
+   </section>
+   <footer class="footer">
+      <div class="footer-block">
+         <div class="img"></div>
+         <div class="my-name">2016 © Prokopiev Ivan</div>
+      </div>
+   </footer>
+   <!-- build:js js/vender.js-->
+   <!-- bower:js-->
+   <script src="bower_components/angular/angular.js"></script>
+   <!-- endbower-->
+   <!-- endbuild-->
+   <!-- build:js js/script.js-->
+   <script src="js/script.min.js"></script>
+   <!-- endbuild-->
+</body>
+
+</html>

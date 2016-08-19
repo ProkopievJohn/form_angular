@@ -1,0 +1,148 @@
+*
+	margin 0
+	padding 0
+
+body
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('../img/bg-960.png')
+	background-size: cover
+	background-repeat no-repeat
+	color: #fff
+
+.main
+	width 90%
+	margin auto
+	margin-top 50px
+
+.content
+	width 65%
+	float left
+
+.title
+	text-transform uppercase
+	font-size: 2rem
+	font-weight 100
+	border-bottom: 1px solid #ccc
+	padding 20px
+	margin-bottom: 30px
+
+ul
+	list-style none
+
+.content-data
+	margin 15px 0
+	&::after
+		content ''
+		display table
+		width 200px
+		border-bottom: 1px solid #ccc
+	
+	p
+		float left
+
+.name, .email
+	width 25%
+
+.message
+	width 50%
+
+.form
+	width 30%
+	box-sizing: border-box
+	float right
+
+.form-group
+	border none
+	margin: 20px 0
+
+.form-control
+	width 100%
+	border-radius: 3px
+	border: none
+	padding 10px
+	background-color: hsla(0, 100%, 100%, 0.3)
+	color #fff
+	resize none
+	&:focus
+		outline: none;
+
+.btn
+	display block
+	background-color: hsla(0, 100%, 100%, 0.5)
+	border none
+	border-radius: 5px
+	padding 10px
+	&:hover
+		cursor pointer
+	
+	svg
+		width 40px
+		height 40px
+
+.btn-right
+	float right
+
+.form-control::-webkit-input-placeholder
+	opacity 1
+	transition opacity 0.3s ease
+	color #fff
+	font-family: 'Open Sans', sans-serif;
+.form-control::-moz-placeholder
+	opacity 1
+	transition opacity 0.3s ease
+	color #fff
+	font-family: 'Open Sans', sans-serif;
+.form-control:-moz-placeholder
+	opacity 1
+	transition opacity 0.3s ease
+	color #fff
+	font-family: 'Open Sans', sans-serif;
+.form-control:-ms-input-placeholder
+	opacity 1
+	transition opacity 0.3s ease
+	color #fff
+	font-family: 'Open Sans', sans-serif;
+.form-control:focus::-webkit-input-placeholder
+	opacity 0
+	transition opacity 0.3s ease
+	color #fff
+.form-control:focus::-moz-placeholder
+	opacity 0
+	transition opacity 0.3s ease
+	color #fff
+.form-control:focus:-moz-placeholder
+	opacity 0
+	transition opacity 0.3s ease
+	color #fff
+.form-control:focus:-ms-input-placeholder
+	opacity 0
+	transition opacity 0.3s ease
+	color #fff
+	
+.footer
+	position absolute
+	left 0
+	bottom 0
+	width 100%
+	background-color: hsla(0, 100%, 100%, 0.2)
+
+.footer-block
+	width 300px
+	padding 20px
+	margin auto
+	&::after
+		content ''
+		display table
+		clear both
+
+.img
+	float left
+	width 150px
+	height 60px
+	line-height 60px
+	background-image: url('../img/JOHN_logo.svg')
+
+.my-name
+	font-size 0.7rem
+	line-height 60px
+	float right
